@@ -26,7 +26,7 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver", "C:/selenium-java-3.4.0/chromedriver.exe");
         driver = new ChromeDriver();
         objLogin = new LoginPage(driver);
-        objNavigate = new NavigationBar(driver)
+        objNavigate = new NavigationBar(driver);
         driver.get("https://www.linkedin.com/");
         LogUtil.log("Opened LinkedIn.com");
         objLogin.login("ashish.p.deshmukh@gmail.com","Angeldreamy89");
