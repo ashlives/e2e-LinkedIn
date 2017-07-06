@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Sanity">
-    <test name="Login Test">
+    <test name="Successful Login Test">
         <classes>
             <class name="LoginSuite.LoginTest">
                 <methods>
-                    <include name="loginIncorrect"/>
                     <include name="loginCorrect"/>
                 </methods>
         </class>
+        </classes>
+    </test>
+
+    <test name="Unsuccessful Login Test">
+        <classes>
+            <class name="LoginSuite.IncorrectLoginTest">
+                <methods>
+                    <include name="loginIncorrect"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

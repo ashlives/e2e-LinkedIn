@@ -26,6 +26,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         objLogin = new LoginPage(driver);
         driver.get("https://www.linkedin.com/");
+        LogUtil.log("Opened LinkedIn.com");
         wait = new WebDriverWait(driver,50);
     }
 

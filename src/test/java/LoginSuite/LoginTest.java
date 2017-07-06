@@ -21,14 +21,4 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals( url, "https://www.linkedin.com/feed/");
         LogUtil.log("Test Passed. Login was successful.");
     }
-
-    @Test
-    @Title("Unsuccessful Login")
-    @Description("Checking login with incorrect credentials.")
-    public void loginIncorrect(){
-        objLogin.login("ashish.p.deshmukh@gmail.com","Incorrect");
-        String error = objLogin.errorMessage();
-        Assert.assertEquals( error, "alert error");
-        LogUtil.log("Test Passed. Alert was shown to user");
-    }
 }
