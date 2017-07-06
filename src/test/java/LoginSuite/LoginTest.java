@@ -16,7 +16,7 @@ public class LoginTest extends BaseTest {
     @Title("Successful Login")
     @Description("Checking login with correct credentials.")
     public void loginCorrect(){
-        objLogin.login("ashish.p.deshmukh@gmail.com","Angeldreamy89");
+        objLogin.login("ashish.p.deshmukh@gmail.com","password");
         String url = driver.getCurrentUrl();
         Assert.assertEquals( url, "https://www.linkedin.com/feed/");
         LogUtil.log("Test Passed. Login was successful.");

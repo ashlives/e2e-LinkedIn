@@ -9,6 +9,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import pages.LoginPage;
+import pages.MyNetworkPage;
 import pages.NavigationBar;
 import resources.LogUtil;
 
@@ -20,6 +21,7 @@ public class BaseTest {
     WebDriverWait wait;
     NavigationBar objNavigate;
     LoginPage objLogin;
+    MyNetworkPage objNetworkPage;
 
     @BeforeSuite
     public void setup() {
@@ -27,6 +29,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         objLogin = new LoginPage(driver);
         objNavigate = new NavigationBar(driver);
+        objNetworkPage = new MyNetworkPage(driver);
         driver.get("https://www.linkedin.com/");
         LogUtil.log("Opened LinkedIn.com");
         objLogin.login("ashish.p.deshmukh@gmail.com","Angeldreamy89");
