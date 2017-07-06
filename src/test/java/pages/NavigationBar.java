@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import resources.LogUtil;
 
 /**
  * Created by Ashish on 06-07-2017.
@@ -13,6 +14,7 @@ public class NavigationBar {
 
     @FindBy(id = "feed-tab-icon")
     WebElement home;
+
 
     @FindBy(id = "mynetwork-tab-icon")
     WebElement myNetwork;
@@ -33,21 +35,27 @@ public class NavigationBar {
 
     public void clickHome(){
         home.click();
+        LogUtil.log("clicked on Home icon.");
+
     }
 
     public void clickMyNetwork(){
         myNetwork.click();
+        LogUtil.log("clicked on My Network icon.");
     }
 
     public void clickJobs(){
         jobs.click();
+        LogUtil.log("clicked on Jobs icon.");
     }
 
     public void clickMessaging(){
         messaging.click();
+        LogUtil.log("clicked on Messaging icon.");
     }
 
     public void clickNotifications(){
         notifications.click();
+        LogUtil.log("clicked on Notification icon.");
     }
 }
