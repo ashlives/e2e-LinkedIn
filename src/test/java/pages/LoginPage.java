@@ -26,6 +26,9 @@ public class LoginPage {
     @FindBy(id = "login-submit")
     WebElement loginButton;
 
+    @FindBy(id = "control_gen_1")
+    WebElement errorMessage;
+
     public void login(String username, String password){
         loginField.sendKeys(username);
         LogUtil.log("Userid Entered.");
@@ -33,5 +36,10 @@ public class LoginPage {
         LogUtil.log("Password Entered.");
         loginButton.click();
         LogUtil.log("Clicked on Login Button.");
+    }
+
+    public String errorMessage(){
+        String error = errorMessage.getAttribute("class");
+        return(error);
     }
 }
