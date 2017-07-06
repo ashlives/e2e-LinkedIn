@@ -13,7 +13,7 @@ import ru.yandex.qatools.allure.annotations.Title;
 public class LoginTest extends BaseTest {
 
     @Test
-    @Title("Login Functionality")
+    @Title("Successful Login")
     @Description("Checking login with correct credentials.")
     public void loginCorrect(){
         objLogin.login("ashish.p.deshmukh@gmail.com","Angeldreamy89");
@@ -23,7 +23,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    @Title("Login Functionality")
+    @Title("Unsuccessful Login")
     @Description("Checking login with incorrect credentials.")
     public void loginIncorrect(){
         objLogin.login("ashish.p.deshmukh@gmail.com","Incorrect");
