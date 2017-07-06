@@ -14,7 +14,7 @@ public class MyNetworkNavigationTest extends BaseTest {
     @Test
     @Title("Navigation-My Network")
     @Description("Navigating to My Network")
-    public void loginCorrect(){
+    public void myNetwork(){
         objNavigate.clickMyNetwork();
         boolean url = driver.getCurrentUrl().contains("mynetwork");
         Assert.assertTrue(url);
