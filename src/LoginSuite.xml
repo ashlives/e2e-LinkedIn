@@ -4,8 +4,10 @@
     <test name="Login Test">
         <classes>
             <class name="LoginSuite.LoginTest">
-                <methods><include name="loginIncorrect"/></methods>
-                <methods><include name="loginCorrect"/></methods>
+                <methods>
+                    <include name="loginIncorrect"/>
+                    <include name="loginCorrect"/>
+                </methods>
         </class>
         </classes>
     </test>

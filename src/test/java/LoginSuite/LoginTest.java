@@ -26,7 +26,7 @@ public class LoginTest extends BaseTest {
     @Title("Login Functionality")
     @Description("Checking login with incorrect credentials.")
     public void loginIncorrect(){
-        objLogin.login("ashish.p.deshmukh@gmail.com","Angeldreamy89");
+        objLogin.login("ashish.p.deshmukh@gmail.com","Incorrect");
         String error = objLogin.errorMessage();
         Assert.assertEquals( error, "alert error");
         LogUtil.log("Test Passed. Alert was shown to user");
